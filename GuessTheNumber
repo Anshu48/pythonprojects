@@ -1,0 +1,23 @@
+import random
+
+def guessNumber():
+    
+    ran = random.randint(0,20)
+
+    user_input = int(input("Guess a number"))
+
+    while(user_input != ran):
+        print("Oops! you guessed a wrong number! Please try again.")
+        user_input = int(input("Guess a number"))
+
+    print("Congrats! You guessed the right number")
+
+
+guessNumber()
+
+user_choice = input("would you like to guess again(Y/N)")
+
+if(user_choice == "Y" or user_choice == "y"):
+    guessNumber()
+
+
