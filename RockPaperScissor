@@ -1,0 +1,57 @@
+import random
+
+print("Welcome to the rock, paper and scissor game!Its you vs computer")
+
+def choice():
+    
+    list1 = ['rock','paper','scissor']
+    ran = random.choice(list1)
+    
+    user_input = input("Enter your choice (rock/paper/scissor)")
+
+    if(user_input != ran):
+        while(user_input == "rock"):
+            if(ran == "paper"):
+                print("You Lost! Computer's choice :",ran)
+                break
+            else:
+                print("You won! Computer's choice :",ran)
+                break
+            
+
+        while(user_input == "paper"):
+            if(ran == "rock"):
+                print("You won! Computer's choice :",ran)
+                break
+            else:
+                print("You Lost! Computer's choice :",ran)
+                break
+            
+
+        while(user_input == "scissor"):
+            if(ran == "rock"):
+                print("You Lost! Computer's choice :",ran)
+                break
+            else:
+                print("You won! Computer's choice :",ran)
+                break
+
+    else:               
+         print("Its a tie!")
+        
+def main():
+    
+    choice()
+
+    user2 = input("Do you want to play again(Y/N)")
+    
+    while(user2 == "Y" or user2 == "y"):
+        choice()
+        user2 = input("Do you want to play again(Y/N)")
+         
+   
+main()
+
+    
+
+                    
